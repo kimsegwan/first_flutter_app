@@ -22,31 +22,34 @@ class MyApp extends StatelessWidget {
 }
 
 class WidgetApp extends StatefulWidget {
-  // WidgetApp({Key key}) : super(key: key);
-  WidgetApp() : super();
+  WidgetApp({Key? key}) : super(key: key);
+
+  // WidgetApp() : super();
   @override
   _WidgetExampleState createState() => _WidgetExampleState();
 }
 
 class _WidgetExampleState extends State<WidgetApp> {
+  List _buttonList = ['더하기', '빼기', '곱하기', '나누기'];
+  //List<DropdownButton<int>> _dropDownMenuItems = new List<DropdownButton<int>>.filled(0, 0, growable: true);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Widget Example'),),
+      appBar: AppBar(
+        title: Text('Widget Example'),
+      ),
       body: Container(
         padding: EdgeInsets.all(15),
         child: Center(
           child: Column(
             children: <Widget>[
-              Padding(padding: EdgeInsets.all(15), child: Text('flutter')),
-              Padding(padding: EdgeInsets.only(left: 20, right: 20), child: TextField()),
-              Padding(padding: EdgeInsets.all(15), child: RaisedButton(child: Text('입력'), onPressed: () {},)),
-              Text('flutter'),
-              TextField(),
-              RaisedButton(child: Text('입력'), onPressed: () {
-
-              })
+              Padding(
+                  padding: EdgeInsets.all(15),
+                  child: DropdownButton(
+                    items: null,
+                    onChanged: null,
+                  ))
             ],
           ),
         ),
