@@ -9,10 +9,22 @@ class FirstApp extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: Center(
-          child: Column(
-            children: [
-            ],
-          ),
+          child: ListView.builder(itemBuilder: (context, position) {
+            return Card(
+              child: Row(
+                children: <Widget>[
+                  Image.asset(
+                    list[position].imagePath,
+                    height: 100,
+                    width: 100,
+                    fit: BoxFit.contain
+                  ),
+                  Text(list[position].animalName)
+                ],
+              ),
+            );
+          },
+            itemCount: list.length),
         ),
       ),
     );
