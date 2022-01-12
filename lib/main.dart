@@ -66,7 +66,7 @@ class _WidgetExampleState extends State<WidgetApp>
     animalList.add(Animal(animalName: '여우', kind: '포유류', imagePath: 'repo/images/fox.png', flyExist: false));
     animalList.add(Animal(animalName: '원숭이', kind: '영장류', imagePath: 'repo/images/monkey.png', flyExist: false));
     animalList.add(Animal(animalName: '돼지', kind: '포유류', imagePath: 'repo/images/pig.png', flyExist: false));
-    animalList.add(Animal(animalName: '벌', kind: '늑대', imagePath: 'repo/images/woolf.png', flyExist: false));
+    animalList.add(Animal(animalName: '늑대', kind: '포유류', imagePath: 'repo/images/wolf.png', flyExist: false));
   }
 
   @override
