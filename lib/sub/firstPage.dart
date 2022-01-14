@@ -3,7 +3,6 @@ import '../animalItem.dart';
 
 class FirstApp extends StatelessWidget {
   final List<Animal> list;
-
   FirstApp({Key? key, required this.list}) : super(key: key);
 
   @override

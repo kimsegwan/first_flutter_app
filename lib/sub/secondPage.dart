@@ -34,6 +34,8 @@ class _SecondApp extends State<SecondApp> {
                   Text('파충류'),
                   Radio(value: 2, groupValue: _radioValue, onChanged: _radioChange),
                   Text('포유류'),
+                  Radio(value: 3, groupValue: _radioValue, onChanged: _radioChange),
+                  Text('갑각류'),
                 ],
               ),
             ],

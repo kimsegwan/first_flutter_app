@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/sub/threePage.dart';
 import 'package:flutter/material.dart';
 import './animalItem.dart';
 
@@ -5,6 +6,7 @@ import './animalItem.dart';
 // import 'imageWidget.dart';
 import 'sub/firstPage.dart';
 import 'sub/secondPage.dart';
+import 'sub/threePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -52,7 +54,7 @@ class _WidgetExampleState extends State<WidgetApp>
       _dropDownMenuItems.add(DropdownMenuItem(child: Text(item), value: item));
     }
     _buttonText = _dropDownMenuItems[0].value.toString();
-    controller = TabController(length: 2, vsync: this);
+    controller = TabController(length: 3, vsync: this);
     controller!.addListener(() {
       if(!controller!.indexIsChanging) {
         print('이전 index, ${controller?.previousIndex}');
@@ -78,7 +80,8 @@ class _WidgetExampleState extends State<WidgetApp>
       body: TabBarView(
         children: <Widget>[
           FirstApp(list: animalList),
-          SecondApp(list: animalList)
+          SecondApp(list: animalList),
+          ThreePage(list: animalList),
         ],
         controller: controller,
       ),
@@ -93,6 +96,11 @@ class _WidgetExampleState extends State<WidgetApp>
           Icons.looks_two,
           color: Colors.blue,
         )),
+        Tab(
+          icon: Icon(
+           Icons.looks_3,
+           color: Colors.blue,
+          )),
       ], controller: controller,),
       /*Container(
         padding: EdgeInsets.all(15),
