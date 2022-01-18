@@ -134,7 +134,6 @@ class _WidgetExampleState extends State<WidgetApp>
               fontSize: 23,
               fontWeight: FontWeight.bold,
               backgroundColor: Colors.blueAccent),
-          overlayColor: MaterialStateProperty.,
           tabs: <Tab>[
             Tab(
                 text: '하나',
