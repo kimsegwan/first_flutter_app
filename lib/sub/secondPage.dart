@@ -195,6 +195,8 @@ class _SecondApp extends State<SecondApp> {
         return "파충류";
       case 2:
         return "포유류";
+      case 3:
+        return "곤충";
     }
   }
 }

@@ -54,21 +54,53 @@ class _WidgetExampleState extends State<WidgetApp>
       _dropDownMenuItems.add(DropdownMenuItem(child: Text(item), value: item));
     }
     _buttonText = _dropDownMenuItems[0].value.toString();
-    controller = TabController(length: 3, vsync: this);
+    controller = TabController(length: 5, vsync: this);
     controller!.addListener(() {
-      if(!controller!.indexIsChanging) {
+      if (!controller!.indexIsChanging) {
         print('이전 index, ${controller?.previousIndex}');
         print('현재 index, ${controller?.index}');
       }
     });
-    animalList.add(Animal(animalName: '벌', kind: '곤충', imagePath: 'repo/images/bee.png', flyExist: false));
-    animalList.add(Animal(animalName: '고양이', kind: '포유류', imagePath: 'repo/images/cat.png', flyExist: false));
-    animalList.add(Animal(animalName: '젖소', kind: '포유류', imagePath: 'repo/images/cow.png', flyExist: false));
-    animalList.add(Animal(animalName: '강아지', kind: '포유류', imagePath: 'repo/images/dog.png', flyExist: false));
-    animalList.add(Animal(animalName: '여우', kind: '포유류', imagePath: 'repo/images/fox.png', flyExist: false));
-    animalList.add(Animal(animalName: '원숭이', kind: '영장류', imagePath: 'repo/images/monkey.png', flyExist: false));
-    animalList.add(Animal(animalName: '돼지', kind: '포유류', imagePath: 'repo/images/pig.png', flyExist: false));
-    animalList.add(Animal(animalName: '늑대', kind: '포유류', imagePath: 'repo/images/wolf.png', flyExist: false));
+    animalList.add(Animal(
+        animalName: '벌',
+        kind: '곤충',
+        imagePath: 'repo/images/bee.png',
+        flyExist: false));
+    animalList.add(Animal(
+        animalName: '고양이',
+        kind: '포유류',
+        imagePath: 'repo/images/cat.png',
+        flyExist: false));
+    animalList.add(Animal(
+        animalName: '젖소',
+        kind: '포유류',
+        imagePath: 'repo/images/cow.png',
+        flyExist: false));
+    animalList.add(Animal(
+        animalName: '강아지',
+        kind: '포유류',
+        imagePath: 'repo/images/dog.png',
+        flyExist: false));
+    animalList.add(Animal(
+        animalName: '여우',
+        kind: '포유류',
+        imagePath: 'repo/images/fox.png',
+        flyExist: false));
+    animalList.add(Animal(
+        animalName: '원숭이',
+        kind: '영장류',
+        imagePath: 'repo/images/monkey.png',
+        flyExist: false));
+    animalList.add(Animal(
+        animalName: '돼지',
+        kind: '포유류',
+        imagePath: 'repo/images/pig.png',
+        flyExist: false));
+    animalList.add(Animal(
+        animalName: '늑대',
+        kind: '포유류',
+        imagePath: 'repo/images/wolf.png',
+        flyExist: false));
   }
 
   @override
@@ -82,26 +114,52 @@ class _WidgetExampleState extends State<WidgetApp>
           FirstApp(list: animalList),
           SecondApp(list: animalList),
           ThreePage(list: animalList),
+          ThreePage(list: animalList),
+          ThreePage(list: animalList),
         ],
         controller: controller,
       ),
-      bottomNavigationBar: TabBar(tabs: <Tab>[
-        Tab(
-            icon: Icon(
-          Icons.looks_one,
-          color: Colors.blue,
-        )),
-        Tab(
-            icon: Icon(
-          Icons.looks_two,
-          color: Colors.blue,
-        )),
-        Tab(
-          icon: Icon(
-           Icons.looks_3,
-           color: Colors.blue,
-          )),
-      ], controller: controller,),
+      bottomNavigationBar: Container(
+        height: 70,
+        child: TabBar(
+          indicatorWeight: 5,// 하단 막대크기 세로
+          //indicatorSize: TabBarIndicatorSize.label, // 하단 막대크기 가로
+          indicatorSize: TabBarIndicatorSize.tab,// 하단 막대크기 가로
+          indicatorColor: Color(0xAAAAAAAA),// 하단 막대 색상
+          labelColor: Colors.amber,// 선택된 탭의 텍스트 색상
+          unselectedLabelColor: Color(0xFFFF2222),// 선택되지 않은 탭의 텍스트 색상
+
+          labelStyle: TextStyle(
+              color: Colors.blue,
+              fontSize: 23,
+              fontWeight: FontWeight.bold,
+              backgroundColor: Colors.blueAccent),
+          overlayColor: MaterialStateProperty.,
+          tabs: <Tab>[
+            Tab(
+                text: '하나',
+                icon: Icon(
+                  Icons.looks_one,
+                  color: Colors.blue,
+                )),
+            Tab(
+                text: '둘',
+                icon: Icon(
+                  Icons.looks_two,
+                  color: Colors.blue,
+                )),
+            Tab(
+                text: '셋',
+                icon: Icon(
+                  Icons.looks_3,
+                  color: Colors.blue,
+                )),
+            Tab(text: '넷', icon: Icon(Icons.looks_4, color: Colors.blue)),
+            Tab(text: '다섯', icon: Icon(Icons.looks_5, color: Colors.blue)),
+          ],
+          controller: controller,
+        ),
+      ),
       /*Container(
         padding: EdgeInsets.all(15),
         child: Center(
