@@ -1,4 +1,5 @@
 import 'package:first_flutter_app/sub/threePage.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import './animalItem.dart';
 
@@ -7,6 +8,7 @@ import './animalItem.dart';
 import 'sub/firstPage.dart';
 import 'sub/secondPage.dart';
 import 'sub/threePage.dart';
+import 'sub/fourPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -114,7 +116,7 @@ class _WidgetExampleState extends State<WidgetApp>
           FirstApp(list: animalList),
           SecondApp(list: animalList),
           ThreePage(list: animalList),
-          ThreePage(list: animalList),
+          CupertinoMain(list: animalList),
           ThreePage(list: animalList),
         ],
         controller: controller,
@@ -128,7 +130,8 @@ class _WidgetExampleState extends State<WidgetApp>
           indicatorColor: Color(0xAAAAAAAA),// 하단 막대 색상
           labelColor: Colors.amber,// 선택된 탭의 텍스트 색상
           unselectedLabelColor: Color(0xFFFF2222),// 선택되지 않은 탭의 텍스트 색상
-
+          dragStartBehavior: DragStartBehavior.start,  // ??
+          overlayColor: MaterialStateProperty.all(Colors.redAccent),  // 영역 누르고 있을경우 색상
           labelStyle: TextStyle(
               color: Colors.blue,
               fontSize: 23,
