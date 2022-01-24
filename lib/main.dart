@@ -139,25 +139,35 @@ class _WidgetExampleState extends State<WidgetApp>
               backgroundColor: Colors.blueAccent),
           tabs: <Tab>[
             Tab(
-                text: '하나',
+                // text: '하나',
                 icon: Icon(
-                  Icons.looks_one,
+                  Icons.home,
                   color: Colors.blue,
                 )),
             Tab(
-                text: '둘',
+                // text: '둘',
                 icon: Icon(
-                  Icons.looks_two,
+                  Icons.access_alarm,
                   color: Colors.blue,
                 )),
             Tab(
-                text: '셋',
+                // text: '셋',
                 icon: Icon(
-                  Icons.looks_3,
+                  Icons.tab,
                   color: Colors.blue,
                 )),
-            Tab(text: '넷', icon: Icon(Icons.looks_4, color: Colors.blue)),
-            Tab(text: '다섯', icon: Icon(Icons.looks_5, color: Colors.blue)),
+            Tab(
+                // text: '넷',
+                icon: Icon(
+                    Icons.ios_share,
+                    color: Colors.blue
+                )),
+            Tab(
+                // text: '다섯',
+                icon: Icon(
+                    Icons.account_balance,
+                    color: Colors.blue
+                )),
           ],
           controller: controller,
         ),
