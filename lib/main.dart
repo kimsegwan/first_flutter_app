@@ -1,14 +1,15 @@
+import 'package:first_flutter_app/sub/fivePage.dart';
 import 'package:first_flutter_app/sub/threePage.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import './animalItem.dart';
-
 //import 'package:flutter/services.dart';
 // import 'imageWidget.dart';
 import 'sub/firstPage.dart';
 import 'sub/secondPage.dart';
 import 'sub/threePage.dart';
 import 'sub/fourPage.dart';
+import 'sub/fivePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -117,7 +118,7 @@ class _WidgetExampleState extends State<WidgetApp>
           SecondApp(list: animalList),
           ThreePage(list: animalList),
           CupertinoMain(list: animalList),
-          ThreePage(list: animalList),
+          FivePage(list: animalList),
         ],
         controller: controller,
       ),
