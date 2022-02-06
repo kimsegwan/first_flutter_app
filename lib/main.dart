@@ -123,12 +123,12 @@ class _WidgetExampleState extends State<WidgetApp>
         controller: controller,
       ),
       bottomNavigationBar: Container(
-        height: 70,
+        height: 45,
         child: TabBar(
-          indicatorWeight: 5,// 하단 막대크기 세로
+          indicatorWeight: 4,// 하단 막대크기 세로
           //indicatorSize: TabBarIndicatorSize.label, // 하단 막대크기 가로
           indicatorSize: TabBarIndicatorSize.tab,// 하단 막대크기 가로
-          indicatorColor: Color(0xAAAAAAAA),// 하단 막대 색상
+          indicatorColor: Color(0xFFEE2233),// 하단 막대 색상
           labelColor: Colors.amber,// 선택된 탭의 텍스트 색상
           unselectedLabelColor: Color(0xFFFF2222),// 선택되지 않은 탭의 텍스트 색상
           dragStartBehavior: DragStartBehavior.start,  // ??
