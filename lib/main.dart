@@ -10,6 +10,7 @@ import 'sub/secondPage.dart';
 import 'sub/threePage.dart';
 import 'sub/fourPage.dart';
 import 'sub/fivePage.dart';
+import 'sub/sixPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -57,7 +58,7 @@ class _WidgetExampleState extends State<WidgetApp>
       _dropDownMenuItems.add(DropdownMenuItem(child: Text(item), value: item));
     }
     _buttonText = _dropDownMenuItems[0].value.toString();
-    controller = TabController(length: 5, vsync: this);
+    controller = TabController(length: 6, vsync: this);
     controller!.addListener(() {
       if (!controller!.indexIsChanging) {
         print('이전 index, ${controller?.previousIndex}');
@@ -119,6 +120,7 @@ class _WidgetExampleState extends State<WidgetApp>
           ThreePage(list: animalList),
           CupertinoMain(list: animalList),
           FivePage(list: animalList),
+          SixPage(list: animalList)
         ],
         controller: controller,
       ),
@@ -167,6 +169,12 @@ class _WidgetExampleState extends State<WidgetApp>
                 // text: '다섯',
                 icon: Icon(
                     Icons.account_balance,
+                    color: Colors.blue
+                )),
+            Tab(
+              // text: '여섯',
+                icon: Icon(
+                    Icons.airline_seat_recline_extra_outlined,
                     color: Colors.blue
                 )),
           ],
