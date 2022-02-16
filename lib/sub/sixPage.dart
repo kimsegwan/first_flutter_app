@@ -15,8 +15,8 @@ class SixPage extends StatefulWidget {
 class _SixPage extends State<SixPage> {
   final imgUrl = 'https://images.pexels.com/photos/240040/pexels-photo-240040.jpeg?auto=compress';
   bool downloading = false;
-  var progressString ='';
-  var file;
+  dynamic progressString ='';
+  dynamic file;
   TextEditingController? _editingController;
 
 
@@ -24,7 +24,7 @@ class _SixPage extends State<SixPage> {
   void initState() {
     super.initState();
     _editingController = new TextEditingController(
-      text: 'https//images.pexels.com/photos/240040/pexels-photo-240040.jpeg?auto=compress'
+      text: 'https://images.pexels.com/photos/240040/pexels-photo-240040.jpeg?auto=compress'
     );
   }
 
@@ -82,7 +82,7 @@ class _SixPage extends State<SixPage> {
             print('end progress');
             return Text('데이터 없음');
           },
-          future: downloadWidget(file),
+          future: downloadWidget(file ?? ''),
         ),
       ),
       floatingActionButton: FloatingActionButton(
