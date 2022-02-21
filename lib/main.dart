@@ -12,6 +12,7 @@ import 'sub/fourPage.dart';
 import 'sub/fivePage.dart';
 import 'sub/sixPage.dart';
 import 'sub/sevenPage.dart';
+import 'sub/eightPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -59,7 +60,7 @@ class _WidgetExampleState extends State<WidgetApp>
       _dropDownMenuItems.add(DropdownMenuItem(child: Text(item), value: item));
     }
     _buttonText = _dropDownMenuItems[0].value.toString();
-    controller = TabController(length: 7, vsync: this);
+    controller = TabController(length: 8, vsync: this);
     controller!.addListener(() {
       if (!controller!.indexIsChanging) {
         print('이전 index, ${controller?.previousIndex}');
@@ -123,6 +124,7 @@ class _WidgetExampleState extends State<WidgetApp>
           FivePage(list: animalList),
           SixPage(list: animalList),
           SevenPage(list: animalList),
+          EightPage(list: animalList),
         ],
         controller: controller,
       ),
@@ -184,6 +186,11 @@ class _WidgetExampleState extends State<WidgetApp>
                   Icons.add_moderator,
                 color: Colors.blue
               )),
+            Tab(
+                icon: Icon(
+                    Icons.airline_seat_flat_angled,
+                    color: Colors.blue
+                )),
           ],
           controller: controller,
         ),
